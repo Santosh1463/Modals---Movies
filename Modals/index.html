@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kollywood - 2022</title>
+  </head>
+  <body>
+    <h1 class="h">Top 3 Kollywood movies of 2022</h1>
+    <div class="vikram">
+     
+    <button id="modal1-trigger" class="eagle">
+      <img src="vikram-button.png" height="350px" width="350px" />
+    </button>
+    <h1 class="v">1. Vikram</h1>
+    </div>
+    <div>
+    <button id="modal2-trigger" class="mama">
+      <img src="lovetoday-button.png" height="350px" width="350px" />
+    </button>
+    </div>
+    <div>
+    <button id="modal3-trigger" class="ps">
+      <img src="ps1-button.png" height="350px" width="350px" />
+    </button>
+   </div>
+    <audio id="myAudio">
+      <source src="OUAT.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="myAudio2">
+      <source src="mama.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="myAudio3">
+      <source src="ps.mp3" type="audio/mpeg" />
+    </audio>
+<div id="modal1" class="modal hidden">
+  <button id="m1" class="close-modal">&times;</button>
+  <div class="modal-header">
+    <h1>Vikram</h1>
+  </div>
+  <div class="modal-content">
+    <p id="type1"></p>
+  </div>
+</div>
+<div class="overlay hidden"></div>
+<div id="modal2" class="modal hidden">
+  <button id="m2" class="close-modal">&times;</button>
+  <div class="modal-header">
+    <h1>Love Today</h1>
+  </div>
+  <div class="modal-content">
+    <p id="type2"></p>
+  </div>
+</div>
+<div class="overlay hidden"></div>
+<div id="modal3" class="modal hidden">
+  <button id="m3" class="close-modal">&times;</button>
+  <div class="modal-header">
+    <h1>Ponniyan Selvan - 1</h1>
+  </div>
+  <div class="modal-content">
+    <p id="type3"></p>
+  </div>
+</div>
+<div class="overlay hidden"></div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
