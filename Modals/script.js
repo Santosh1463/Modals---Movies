@@ -19,27 +19,40 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal1 = document.querySelector('.close-modal');
 const btnCloseModal2 = document.getElementById('m2');
 const btnCloseModal3 = document.getElementById('m3');
-const txt1 = `Vikram is a 2022 Indian Tamil-language action thriller film directed by Lokesh Kanagaraj,
-who co-wrote the script with Rathna Kumar and produced by Kamal Haasan who also stars in 
-the titular role as agent Vikram, who leads a black-ops squad that aims to bring down a 
-drug syndicate led by Sandhanam (Vijay Sethupathi). The film also stars Fahadh Faasil, 
-Kalidas Jayaram, Narain and Chemban Vinod Jose, while Suriya appears in a cameo role. 
-A spiritual successor of the identically-named 1986 Tamil film, it is the second 
-installment in the Lokesh Cinematic Universe following Kaithi (2019).Vikram was released 
-theatrically on 3 June 2022. The film received positive reviews from critics, with praise
-for the performances of the cast, direction, writing, music, cinematography, action 
-sequences and other technical aspects. Grossing over ₹420–500 crore (US$53–63 million), 
-the film broke several records, becoming the second highest-grossing Tamil film and 
-fifth highest-grossing Indian film of that year, and the fourth highest-grossing Tamil 
-film of all time. It became the highest-grossing Tamil film in the state of Tamil Nadu, 
-surpassing the collections of previous record holder Baahubali 2: The Conclusion (2017),
-until the release of Ponniyin Selvan: I that year.`;
-let txt2=`done`;
-let txt3=`oombu`;
+let txt1;
+let txt2;
+let txt3;
 let isPlaying = false;
 var i;
 var typedContent;
 var timer;
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == XMLHttpRequest.DONE) {
+    txt1 = xhr.responseText;
+  }
+}
+xhr.open("GET", "modal1.txt", true);
+xhr.send();
+
+var vhr = new XMLHttpRequest();
+vhr.onreadystatechange = function() {
+  if (vhr.readyState == XMLHttpRequest.DONE) {
+    txt2 = vhr.responseText;
+  }
+}
+vhr.open("GET", "modal2.txt", true);
+vhr.send();
+
+var chr = new XMLHttpRequest();
+chr.onreadystatechange = function() {
+  if (chr.readyState == XMLHttpRequest.DONE) {
+    txt3 = chr.responseText;
+  }
+}
+chr.open("GET", "modal3.txt", true);
+chr.send();
+
 function typeContent(modal, content, speed) {
   i = 0;
   typedContent = "";
